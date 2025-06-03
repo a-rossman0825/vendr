@@ -12,19 +12,19 @@
   <title>vendr</title>
 </head>
 
-<body data-bs-theme="light">
+<body data-bs-theme="dark">
   <!-- SECTION -->
   <header class="container-fluid">
     <nav class="row navbar bg-codeworks text-light gap-2 px-2 justify-content-between">
-      <div class="col-3">
+      <div class="col-12">
         <img src="./assets/img/logo.png" height="45" alt="" loading="lazy"/>
         <b>vendr</b>
       </div>
     </nav>
   </header>
   <section class="container-fluid bg-dark">
-    <div class="row mt-4 g-2">
-      <div class="col-2 p-4">
+    <div class="row mt-4">
+      <div class="col-5 col-md-2 p-4">
         <div class="row">
           <img
             src="./assets/img/coinslot.png"
@@ -35,16 +35,16 @@
           />
         </div>
         <div class="row">
-          <div class="col-12">
-            <div class="card bg-black" style="height: 12vh">
+          <div class="col-12 w-100">
+            <div class="card bg-black">
               <div class="card-body text-center">
-                <div class="fs-3 text-danger">$0.00</div>
+                <div class=" text-danger">$0.00</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-10">
+      <div class="col-7 col-md-10">
         <div id="items-list" class="row g-3"></div>
         <!-- STUB SECTION FOR ITEMS -->
         <!--
@@ -68,16 +68,7 @@
       -->
       </div>
     </div>
-
-    
-
   </section>
-
-  <footer class="text-bg-dark">
-    <div class="text-center">
-      <p class="mb-0"><small>Made with <i class="mdi mdi-heart text-pink"></i> by CodeWorks</small></p>
-    </div>
-  </footer>
 
   <!-- SECTION links for bootstrap, axios, and auth -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
