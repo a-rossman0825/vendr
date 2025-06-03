@@ -30,7 +30,7 @@ export class Item {
                 <small class="col-12 ">$${this.price}</small>
               </div>
             </div>
-            <button class="col-2 col-md-3 mt-3 rounded bg-success text-light"><small>Buy</small></button>
+            <button class="col-2 col-md-3 mt-3 rounded bg-success text-light" onclick="app.itemsController.purchaseItem()"><small>Buy</small></button>
           </div>
         </div>
       </div>

@@ -3,7 +3,8 @@ import { AppState } from "../AppState.js";
 
 class CoinsService {
   increaseCoins() {
-    AppState.coins++;
+    AppState.coins += 0.25;
+    console.log(AppState.coins)
   }
 }
 

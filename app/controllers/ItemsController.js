@@ -1,4 +1,6 @@
 import { AppState } from "../AppState.js";
+import { Item } from "../models/item.js";
+import { itemsService } from "../services/ItemsService.js";
 
 
 export class ItemsController {
@@ -14,5 +16,9 @@ export class ItemsController {
     items.forEach((item) => itemCards += item.itemCardHTMLTemplate);
     console.log(itemCards);
     itemsListElem.innerHTML = itemCards;
+  }
+
+  purchaseItem(name) {
+    itemsService.buyItem(name);
   }
 }
