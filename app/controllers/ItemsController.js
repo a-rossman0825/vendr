@@ -18,7 +18,7 @@ export class ItemsController {
     itemsListElem.innerHTML = itemCards;
   }
 
-  purchaseItem(name) {
-    itemsService.buyItem(name);
+  purchaseItem(price) {
+    itemsService.buyItem(price);
   }
 }
