@@ -16,3 +16,9 @@ main {
   justify-content: start;
   align-items: end;
 }
+
+.card-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}

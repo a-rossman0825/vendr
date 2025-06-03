@@ -4,32 +4,33 @@
 //   }
 // }
 
-export class item {
-  constructor(name, image, price) {
-    this.name = name;
-    this.image = image;
-    this.price = price;
+export class Item {
+  constructor(item) {
+    this.name = item.name;
+    this.image = item.image;
+    this.price = item.price.toFixed(2);
   }
 
   get itemCardHTMLTemplate() {
     return `
-    <div class="col-4">
-        <div class="card">
-          <div class="card-body text-dark">
-            <div class="row justify-content-center">
-              <img
-                src="https://images.unsplash.com/photo-1741520149946-d2e652514b5a?q=80&w=994&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="img-fluid rounded-top col-12"
-                alt="bag of chips"
-              />
-            </div>
-            <div class="row">
-              <div class="col-8">
-                <small class="col-6 text-start">Classic Lays Chips</small>
-                <small>$5.00</small>
+      <div class="col-3 mt-4">
+        <div class="rounded text-dark">
+          <div class="row justify-content-center">
+            <img
+              src="${this.image}"
+              class="rounded col-12 card-image"
+              alt="bag of chips"/>
+          </div>
+          <div class="row">
+            <div class="col-8 text-light ms-1 mt-2">
+              <div class="row">
+                <small class="col-12 text-start">${this.name}</small>
               </div>
-              <button class="col-4 mt-3"><small>Buy</small></button>
+              <div class="row">
+                <small class="col-12">$${this.price}</small>
+              </div>
             </div>
+            <button class="col-3 mt-3 rounded bg-success text-light"><small>Buy</small></button>
           </div>
         </div>
       </div>

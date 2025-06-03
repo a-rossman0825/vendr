@@ -20,39 +20,58 @@
         <img src="./assets/img/logo.png" height="45" alt="" loading="lazy"/>
         <b>vendr</b>
       </div>
-      <div class="col-2">
-        <button class="rounded">Add .25</button>
-      </div>
     </nav>
   </header>
-
-  <main class="container-fluid bg-dark">
-    <div class="row mt-4">
-      <!-- STUB SECTION FOR ITEMS -->
-      <!-- <div class="col-4">
-        <div class="card">
-          <div class="card-body text-dark">
+  <section class="container-fluid bg-dark">
+    <div class="row mt-4 g-2">
+      <div class="col-2 p-4">
+        <div class="row">
+          <img
+            src="./assets/img/coinslot.png"
+            class="img-fluid rounded-top"
+            alt="Coin Slot"
+            style="width: 20vw"
+            onclick="addCoins()"
+          />
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card bg-black" style="height: 12vh">
+              <div class="card-body text-center">
+                <div class="fs-3 text-danger">$0.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-10">
+        <div id="items-list" class="row g-3"></div>
+        <!-- STUB SECTION FOR ITEMS -->
+        <!--
+        <div class="col-3 mt-4">
+          <div class="rounded text-dark">
             <div class="row justify-content-center">
               <img
-                src="https://images.unsplash.com/photo-1741520149946-d2e652514b5a?q=80&w=994&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="img-fluid rounded-top col-12"
+                src="${this.image}"
+                class="rounded col-12"
                 alt="bag of chips"
               />
             </div>
             <div class="row">
-              <div class="col-8">
-                <small class="col-6 text-start">Classic Lays Chips</small>
-                <small>$5.00</small>
+              <div class="col-8 text-light">
+                <small class="col-6 text-start">${this.name}</small>
+                <small>$${this.price}</small>
               </div>
-              <button class="col-4 mt-3"><small>Buy</small></button>
+              <button class="col-4 mt-3 rounded bg-success text-light"><small>Buy</small></button>
             </div>
           </div>
-        </div>
-      </div> -->
+      -->
+      </div>
     </div>
+
     
 
-  </main>
+  </section>
 
   <footer class="text-bg-dark">
     <div class="text-center">
