@@ -20,19 +20,14 @@ export class Item {
             <img
               src="${this.image}"
               class="rounded col-12 card-image"
-              alt="bag of chips"/>
+              alt="a picture of ${this.name}"/>
           </div>
-          <div class="row justify-content-center justify-content-lg-around">
-            <div class="col-4 col-md-8 text-light ms-1 mt-2">
-              <div class="row text-start">
-                <small class="col-12">${this.name}</small>
-              </div>
-              <div class="row">
-                <small class="col-3">${this.id}</small>
-                <small class="col-6 ">$${this.price.toFixed(2)}</small>
-              </div>
+          <div class="row mt-2 px-2 py-1 bg-dark rounded text-center label">
+            <div class="fw-bold fs-6">${this.name}</div>
+            <div class="row d-flex justify-content-between px-1">
+              <small>ID: ${this.id}</small>
+              <small>💵$${this.price.toFixed(2)}</small>
             </div>
-            <button class="col-2 col-md-3 mt-3 rounded bg-success text-light" onclick="app.itemsController.purchaseItem('${this.price}')"><small>Buy</small></button>
           </div>
         </div>
       </div>

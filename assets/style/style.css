@@ -22,3 +22,10 @@ main {
   height: 250px;
   object-fit: cover;
 }
+
+.label {
+  background-color: black;
+  border: 1px solid lightgreen;
+  box-shadow: 0 3px 10px darkgrey;
+  color: lightgreen;
+}
