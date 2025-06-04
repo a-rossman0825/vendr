@@ -7,8 +7,9 @@
 export class Item {
   constructor(item) {
     this.name = item.name;
+    this.id = item.id;
     this.image = item.image;
-    this.price = item.price.toFixed(2);
+    this.price = item.price;
   }
 
   get itemCardHTMLTemplate() {
@@ -27,7 +28,8 @@ export class Item {
                 <small class="col-12">${this.name}</small>
               </div>
               <div class="row">
-                <small class="col-12 ">$${this.price}</small>
+                <small class="col-3">${this.id}</small>
+                <small class="col-6 ">$${this.price.toFixed(2)}</small>
               </div>
             </div>
             <button class="col-2 col-md-3 mt-3 rounded bg-success text-light" onclick="app.itemsController.purchaseItem('${this.price}')"><small>Buy</small></button>

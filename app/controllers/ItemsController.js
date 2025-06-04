@@ -7,18 +7,45 @@ export class ItemsController {
   constructor() {
     console.log('ItemsController On');
     this.drawItems();
+    this.drawSelection;
+    AppState.on('selection', this.drawSelection);
   }
 
   drawItems() {
     const items = AppState.items;
-    const itemsListElem = document.getElementById('items-list');
+    const itemsListElm = document.getElementById('items-list');
     let itemCards = '';
     items.forEach((item) => itemCards += item.itemCardHTMLTemplate);
-    console.log(itemCards);
-    itemsListElem.innerHTML = itemCards;
+    // console.log(itemCards);
+    itemsListElm.innerHTML = itemCards;
   }
 
   purchaseItem(price) {
     itemsService.buyItem(price);
+  }
+
+  makeSelection(input){
+    itemsService.chooseItemButton(input);
+  }
+
+  drawSelection(){
+    let selection = '##';
+    const selectionElm = document.getElementById('selection-display');
+    if (AppState.selection.length == 1) {
+      selection = `${AppState.selection[0]}#`;
+    }
+    if (AppState.selection.length == 2) {
+      selection = AppState.selection.join('');
+
+    }
+    selectionElm.innerText = selection;
+  }
+
+  enterSelection() {
+    itemsService.compareSelection();
+  }
+
+  clearSelection() {
+    itemsService.clearDisplay();
   }
 }
