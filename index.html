@@ -15,10 +15,11 @@
 <body data-bs-theme="dark">
   <!-- SECTION -->
   <header class="container-fluid">
-    <nav class="row navbar bg-codeworks text-light gap-2 px-2 justify-content-between">
+    <nav class="row navbar bg-codeworks text-light gap-2 px-2 text-center">
       <div class="col-12">
-        <img src="./assets/img/logo.png" height="45" alt="" loading="lazy"/>
-        <b>vendr</b>
+        <div class="row justify-content-center border mt-2">
+          <h1 class="header border rounded mt-2 col-4"><span class="v-text">V</span><span class="e-text">E</span><span class="n-text">N</span><span class="d-text">D</span><span class="r-text">R</span></h1>
+        </div>
       </div>
     </nav>
   </header>
@@ -195,6 +196,18 @@
       </div>
     </div>
   </section>
+  <footer class="container-fluid bg-codeworks" style="height: 100px;">
+    <div class="row justify-content-center">
+      <div class="col-md-5 position-relative">
+        <div id="bought-item" class="text-center ms-5 ps-5">
+          <!--NOTE CHOSEN ITEM IMAGE GOES HERE-->
+        </div>
+        <div class="door text-center position-relative" style="overflow: hidden; z-index: 3;" type="button" onclick="app.itemsController.openDoor()">
+          <span>✋🏻 PUSH TO OPEN</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- SECTION links for bootstrap, axios, and auth -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

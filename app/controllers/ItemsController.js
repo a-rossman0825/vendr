@@ -9,6 +9,7 @@ export class ItemsController {
     this.drawItems();
     this.drawSelection;
     AppState.on('selection', this.drawSelection);
+    AppState.on('items', this.drawItems);
   }
 
   drawItems() {
@@ -47,5 +48,13 @@ export class ItemsController {
 
   clearSelection() {
     itemsService.clearDisplay();
+  }
+
+  openDoor() {
+    let chosenItem = AppState.chosenItem;
+    if (chosenItem) {
+    itemsService.showItem(chosenItem);
+    AppState.chosenItem = null;
+    }
   }
 }

@@ -6,6 +6,7 @@ class ObservableAppState extends EventEmitter {
 
   coins = 0;
   selection = [];
+  chosenItem = null;
 
   //STUB for new Item({name: '', id: '', image: '', price: 0.00}),
   //id= ("A-J""0-9");

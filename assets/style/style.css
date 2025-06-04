@@ -17,15 +17,74 @@ main {
   align-items: end;
 }
 
+.header {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.3ch;
+  background: black;
+  box-shadow: 0 0 40px hotpink;
+}
+
+.v-text {
+  color: red;
+  text-shadow: 0 0 40px white;
+}
+
+.e-text {
+  color: orange;
+  text-shadow: 0 0 40px whitesmoke;
+}
+
+.n-text {
+  color: yellow;
+  text-shadow: 0 0 40px wheat;
+}
+
+.d-text {
+  color: indigo;
+  text-shadow: 0 0 40px lightgoldenrodyellow;
+}
+
+.r-text {
+  color: lightskyblue;
+  text-shadow: 0 0 40px whitesmoke;
+}
+
 .card-image {
   width: 250px;
   height: 250px;
   object-fit: cover;
 }
 
-.label {
+.card-label {
   background-color: black;
   border: 1px solid lightgreen;
   box-shadow: 0 3px 10px darkgrey;
   color: lightgreen;
+}
+
+.door {
+  height: 50px;
+  background: black;
+  border: 3px inset slategray;
+  border-radius: 4px;
+  color: lightgreen;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-in-door {
+  background-color: black;
+  border-top: 2px solid slategray;
+  border-bottom: 4px solid black;
+  position: relative;
+  z-index: 1;
+}
+
+.bought-item {
+  height: 120px;
+  top: -60px;
+  z-index: 2;
 }
